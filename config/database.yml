@@ -19,4 +19,4 @@ test:
 production:
   adapter: postgresql
   database: prelaunchr
-  host: localhost
+  host: <%= ENV["OPENSHIFT_POSTGRESQL_DB_HOST"] %>
