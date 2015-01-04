@@ -35,13 +35,13 @@ When your prelaunch campaign comes to an end we've included a helpful `rake` tas
 
 * Create an account on openshift if you don't have one yet (https://www.openshift.com/app/account/new).
 
-* Intall on your computer rhc tools (https://developers.openshift.com/en/managing-client-tools.html)
+* Install, on your computer, rhc tools (https://developers.openshift.com/en/managing-client-tools.html)
 
 * Config your account on your computer.
 
      $ rhc setup --clean
 
-* Creating the application on Openshift.
+* Create the application on Openshift.
 
      $ rhc app create -a prelaunchr -t ruby-1.9
      $ cd prelaunchr/
