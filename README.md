@@ -35,17 +35,20 @@ When your prelaunch campaign comes to an end we've included a helpful `rake` tas
 
 * Create an account on openshift if you don't have one yet (https://www.openshift.com/app/account/new).
 
-* Install, on your computer, rhc tools (https://developers.openshift.com/en/managing-client-tools.html)
+* Install, on your computer, rhc tools (https://developers.openshift.com/en/managing-client-tools.html).
 
-* Config your account on your computer.
+* Configure your account on your computer.
 
      $ rhc setup --clean
 
 * Create the application on Openshift.
 
      $ rhc app create -a prelaunchr -t ruby-1.9
+     
      $ cd prelaunchr/
+     
      $ git remote add upstream -m master git://github.com/rancavil/prelaunchr.git
+     
      $ git pull -s recursive -X theirs upstream master
 
 * We need to create the percistence to the application, now we will install postgresql-9.2 Openshift cartidge.
