@@ -48,7 +48,7 @@ When your prelaunch campaign comes to an end we've included a helpful `rake` tas
      $ git remote add upstream -m master git://github.com/rancavil/prelaunchr.git
      $ git pull -s recursive -X theirs upstream master
 
-* We need to create the percistence to the application, now we will install postgresql-9.2 Opensshift cartidge.
+* We need to create the percistence to the application, now we will install postgresql-9.2 Openshift cartidge.
 
      $ rhc cartridge add postgresql-9.2 -a prelaunchr
 
