@@ -33,7 +33,7 @@ When your prelaunch campaign comes to an end we've included a helpful `rake` tas
 
 ## Deploying prelaunchr on Openshift
 
-* Create an account on openshift if you don't have one yet.
+* Create an account on openshift if you don't have one yet (https://www.openshift.com/app/account/new).
 
 * Intall on your computer rhc tools (https://developers.openshift.com/en/managing-client-tools.html)
 
@@ -52,7 +52,8 @@ When your prelaunch campaign comes to an end we've included a helpful `rake` tas
 
      $ rhc cartridge add postgresql-9.2 -a prelaunchr
 
-* Finally.     
+* Finally.
+ 
      $ git push
 
 ## License
