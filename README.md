@@ -59,6 +59,8 @@ When your prelaunch campaign comes to an end we've included a helpful `rake` tas
  
      $ git push
 
+* You can see how was deployed in http://prelaunchr-aylin.rhcloud.com/
+
 ## License
 
 The code, documentation, non-branded copy and configuration are released under
