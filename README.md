@@ -31,6 +31,30 @@ When your prelaunch campaign comes to an end we've included a helpful `rake` tas
 * Run `rake secret` to generate a new Rails `secret_token` and set it in `/config/intializers/secret_token.rb` (or in the `RAILS_SECRET` environment variable).
 * The `config.ended` setting in `/config/application.rb` decides whether the prelaunch campaign has ended or not (e.g. Active/Inactive). We've included this option so you can quickly close the application and direct users to your newly launched site. 
 
+## Deploying prelaunchr on Openshift
+
+* Create an account on openshift if you don't have one yet.
+
+* Intall on your computer rhc tools (https://developers.openshift.com/en/managing-client-tools.html)
+
+* Config your account on your computer.
+
+     $ rhc setup --clean
+
+* Creating the application on Openshift.
+
+     $ rhc app create -a prelaunchr -t ruby-1.9
+     $ cd prelaunchr/
+     $ git remote add upstream -m master git://github.com/rancavil/prelaunchr.git
+     $ git pull -s recursive -X theirs upstream master
+
+* We need to create the percistence to the application, now we will install postgresql-9.2 Opensshift cartidge.
+
+     $ rhc cartridge add postgresql-9.2 -a prelaunchr
+
+* Finally.     
+     $ git push
+
 ## License
 
 The code, documentation, non-branded copy and configuration are released under
